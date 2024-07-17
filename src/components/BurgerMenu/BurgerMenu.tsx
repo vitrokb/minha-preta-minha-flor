@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './BurgerMenu.css';
-import { Button } from '@mui/material';
+import { StyledButton } from '../StyledButton';
 
 function BurgerMenu() {
   const [isOpen, setIsOpen] = useState(true);
@@ -20,22 +20,24 @@ function BurgerMenu() {
       <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
         <li>
           <Link to="/">
-            <Button variant="outlined">INICIO</Button>
+            <StyledButton variant="outlined" active>
+              INICIO
+            </StyledButton>
           </Link>
         </li>
         <li>
           <Link to="/exposicao">
-            <Button variant="outlined">EXPOSIÇÃO</Button>
+            <StyledButton variant="outlined">EXPOSIÇÃO</StyledButton>
           </Link>
         </li>
         <li>
           <Link to="/projeto">
-            <Button variant="outlined">PROJETO</Button>
+            <StyledButton variant="outlined">PROJETO</StyledButton>
           </Link>
         </li>
         <li>
           <Link to="/bastidores">
-            <Button variant="outlined">BASTIDORES</Button>
+            <StyledButton variant="outlined">BASTIDORES</StyledButton>
           </Link>
         </li>
       </ul>

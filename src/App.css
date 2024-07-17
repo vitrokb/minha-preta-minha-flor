@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Open Sauce';
+  src: local('Open Sauce'), url(./fonts/OpenSauceOneRegular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sauce Bold';
+  src: local('Open Sauce Bold'), url(./fonts/OpenSauceOneBold.ttf) format('truetype');
+}
