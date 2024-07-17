@@ -1,5 +1,7 @@
+import { Navbar } from '../../components/Navbar';
+
 function Exposition() {
-  return <div>Exposition</div>;
+  return <Navbar />;
 }
 
 export default Exposition;
