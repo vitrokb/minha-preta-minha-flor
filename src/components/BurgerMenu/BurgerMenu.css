@@ -1,9 +1,15 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: #F9F1E4;
   padding: 0.5rem 1rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: fit-content;
+}
+
+.navbar.changeDirection {
+  height: 100vh;
+  width: 100vw;
 }
 
 .burger {
@@ -18,12 +24,12 @@
 .line {
   background-color: #0E0A0A;
   height: 0.25rem;
-  width: 100%;
+  width: 2rem;
   transition: all 0.3s ease;
 }
 
 .line.open:nth-child(1) {
-  transform: rotate(40deg) translate(0.4rem, 0.4rem);
+  transform: rotate(50deg) translate(0.5rem, 0.5rem);
 }
 
 .line.open:nth-child(2) {
@@ -31,27 +37,29 @@
 }
 
 .line.open:nth-child(3) {
-  transform: rotate(-43deg) translate(0.56rem, -0.52rem);
+  transform: rotate(-50deg) translate(0.48rem, -0.5rem);
 }
 
 .nav-links {
-  display: flex;
-  list-style: none;
-  transition: all 0.3s ease;
-  overflow: hidden;
-  height: 0;
+  display: none;
 }
 
 .nav-links.open {
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .nav-links li {
-  margin: 0 1rem;
+  margin: 1rem 1rem;
 }
 
 .nav-links a {
   color: #000000;
-  /* text-decoration: none; */
+  text-decoration: none;
   font-size: 1.2rem;
 }
