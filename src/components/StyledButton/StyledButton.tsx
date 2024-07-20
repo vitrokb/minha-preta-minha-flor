@@ -1,7 +1,7 @@
 import { Button as MuiButton, ButtonProps as MuiButtonProps, styled } from '@mui/material';
 
 interface ButtonProps extends MuiButtonProps {
-  active?: boolean | string;
+  active?: number | string;
 }
 
 const StyledButton = styled(MuiButton)<ButtonProps>(({ theme, active }) => ({

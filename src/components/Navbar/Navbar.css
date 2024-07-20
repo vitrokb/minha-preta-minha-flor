@@ -1,10 +1,11 @@
 .navbar {
-  display: flex;
   background-color: #F9F1E4;
-  padding: 0.5rem 1rem;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: fit-content;
+  padding-right: 1rem;
+}
+
+.navbar.responsive {
+  padding: 1rem;
+
 }
 
 .navbar.changeDirection {
@@ -19,6 +20,10 @@
   justify-content: space-around;
   height: 2rem;
   width: 2rem;
+}
+
+.burger.notShowsBurger {
+  display: none;
 }
 
 .line {
@@ -44,21 +49,28 @@
   display: none;
 }
 
+.nav-links.desktopLinks {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
 .nav-links.open {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  list-style: none;
   transition: all 0.3s ease;
   overflow: hidden;
 }
 
-.nav-links li {
+li {
+  list-style: none;
   margin: 1rem 1rem;
 }
 
-.nav-links a {
+a {
   color: #000000;
   text-decoration: none;
   font-size: 1.2rem;
