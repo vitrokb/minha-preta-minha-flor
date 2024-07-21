@@ -5,7 +5,7 @@ import { useMediaQuery } from '@mui/material';
 import './Navbar.css';
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const matchesMediaQuery = useMediaQuery('(max-width:670px)');
 

@@ -4,6 +4,7 @@ import { Exposition } from './pages/Exposition';
 import { Project } from './pages/Project';
 import { BehindTheScenes } from './pages/BehindTheScenes';
 import { createTheme, ThemeProvider } from '@mui/material';
+import './App.css';
 
 const App = () => {
   const theme = createTheme({

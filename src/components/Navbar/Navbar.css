@@ -1,11 +1,14 @@
 .navbar {
   background-color: #F9F1E4;
   padding-right: 1rem;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  z-index: 1;
 }
 
 .navbar.responsive {
   padding: 1rem;
-
 }
 
 .navbar.changeDirection {
