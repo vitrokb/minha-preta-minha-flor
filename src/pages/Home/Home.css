@@ -34,11 +34,6 @@
   padding: 2rem 0;
 }
 
-.hero-content img {
-  margin-top: 2rem;
-  width: 300px;
-}
-
 @media (min-width: 670px) {
   .hero {
     flex-direction: row;

@@ -1,0 +1,10 @@
+.footer-content img {
+  margin-top: 2rem;
+  width: 300px;
+}
+
+@media (min-width: 670px) {
+  .footer-content img {
+    width: 600px;
+  }
+}
