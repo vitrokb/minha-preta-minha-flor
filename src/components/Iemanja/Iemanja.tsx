@@ -1,4 +1,5 @@
 import { Typography } from '@mui/material';
+import Carousel from 'react-material-ui-carousel';
 import Iemanja1 from '../../assets/iemanja-pictures/1.png';
 import Iemanja2 from '../../assets/iemanja-pictures/2.png';
 import Iemanja4 from '../../assets/iemanja-pictures/4.png';
@@ -9,12 +10,10 @@ import Iemanja8 from '../../assets/iemanja-pictures/8.png';
 import Iemanja9 from '../../assets/iemanja-pictures/9.png';
 import Iemanja11 from '../../assets/iemanja-pictures/11.png';
 import Iemanja12 from '../../assets/iemanja-pictures/12.png';
-
 import './Iemanja.css';
-import Carousel from 'react-material-ui-carousel';
 
 function Iemanja() {
-  const pictures = [
+  const IemanjaPictures = [
     { name: Iemanja2 },
     { name: Iemanja4 },
     { name: Iemanja6 },
@@ -44,13 +43,8 @@ function Iemanja() {
 
       <div className="iemanja-carrousel-wrapper">
         <div className="iemanja-carrousel">
-          <Carousel
-            duration={1000}
-            interval={7000}
-            next={(next, active) => console.log(`we left ${active}, and are now at ${next}`)}
-            prev={(prev, active) => console.log(`we left ${active}, and are now at ${prev}`)}
-          >
-            {pictures.map((picture, key) => (
+          <Carousel duration={1000} interval={7000}>
+            {IemanjaPictures.map((picture, key) => (
               <img className="iemanja-carrousel-img" key={key} src={picture.name} />
             ))}
           </Carousel>

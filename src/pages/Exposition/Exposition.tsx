@@ -1,19 +1,17 @@
 import { Navbar } from '../../components/Navbar';
 import { Iemanja } from '../../components/Iemanja';
-import Logo from '../../assets/Logo.svg';
+import { Oxum } from '../../components/Oxum';
 import './Exposition.css';
+import { Logo } from '../../components/Logo';
 
 function Exposition() {
   return (
     <div className="exposition-content">
+      <Logo />
       <Navbar />
-      <img
-        className="exposition-logo"
-        src={Logo}
-        alt="Projecto logo with the text 'Minha preta minha flor' and a flower"
-      />
 
       <Iemanja />
+      <Oxum />
     </div>
   );
 }

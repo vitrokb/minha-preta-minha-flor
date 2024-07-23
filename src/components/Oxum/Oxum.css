@@ -1,0 +1,134 @@
+.oxum-first-section-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 2rem;
+}
+
+.oxum-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 2rem 0;
+}
+
+.oxum-first-picture-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.oxum-first-picture {
+  width: 90%;
+}
+
+.oxum-first-picture-wrapper img {
+  border-radius: 5px;
+  width: -webkit-fill-available;
+}
+
+.oxum-carrousel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oxum-carrousel {
+  width: 90vw;
+  margin: 2rem;
+}
+
+.oxum-carrousel-img {
+  border-radius: 5px;
+  width: 100%;
+}
+
+.oxum-second-section-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.oxum-second-section-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 2rem 2rem;
+}
+
+.oxum-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 0 2rem;
+}
+
+.oxum-grid-item-1 {
+  grid-area: 1 / 1 / 7 / 2;
+}
+
+.oxum-grid-item-2 {
+  grid-area: 6 / 2 / 12 / 3;
+}
+
+.oxum-grid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@media (min-width: 1023px) {
+  .oxum-first-section-wrapper {
+    flex-direction: row;
+  }
+
+  .oxum-text {
+    margin-left: 0;
+  }
+
+  .oxum-first-picture-wrapper {
+    width: 70vw;
+  }
+}
+
+@media (min-width: 1279px) {
+  .oxum-first-picture-wrapper {
+    width: 80vw;
+  }
+
+  .oxum-second-section-wrapper {
+    flex-direction: row;
+    margin: 0 2rem;
+  }
+
+  .oxum-second-section-text {
+    width: 30%;
+    margin: 2rem 2rem 0;
+  }
+
+  .oxum-second-section-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .oxum-grid-wrapper {
+    height: 98vh;
+  }
+}
+
+@media (min-width: 1600px) {
+  .oxum-carrousel-img {
+    width: 100%;
+  }
+
+  .oxum-carrousel {
+    width: 70vw;
+  }
+}
