@@ -1,6 +1,7 @@
 import { Navbar } from '../../components/Navbar';
 import { Iemanja } from '../../components/Iemanja';
 import { Oxum } from '../../components/Oxum';
+import { Yansa } from '../../components/Yansa';
 import './Exposition.css';
 import { Logo } from '../../components/Logo';
 
@@ -12,6 +13,7 @@ function Exposition() {
 
       <Iemanja />
       <Oxum />
+      <Yansa />
     </div>
   );
 }
