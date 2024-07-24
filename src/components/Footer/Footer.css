@@ -1,3 +1,9 @@
+.footer-wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
 .footer-content img {
   margin-top: 2rem;
   width: 300px;

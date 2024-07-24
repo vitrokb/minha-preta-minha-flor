@@ -7,8 +7,8 @@ import Nana5 from '../../assets/nana-pictures/5.png';
 import Nana6 from '../../assets/nana-pictures/6.png';
 import Nana7 from '../../assets/nana-pictures/7.png';
 import Nana8 from '../../assets/nana-pictures/8.png';
-import './Nana.css';
 import Carousel from 'react-material-ui-carousel';
+import './Nana.css';
 
 function Nana() {
   const nanaPictures = [
@@ -18,6 +18,7 @@ function Nana() {
     { name: Nana5 },
     { name: Nana6 },
   ];
+
   return (
     <>
       <div className="nana-first-section-wrapper">
