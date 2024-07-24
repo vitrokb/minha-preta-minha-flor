@@ -30,8 +30,8 @@ function Iemanja() {
             Yemanjá
           </Typography>
           <Typography variant="body2" paragraph sx={{ textAlign: 'center' }}>
-            Como é lindo o canto de Yemanjá, faz até o pescador chorar, quem não escuta a mãe d'água
-            cantar, vai com ela pro fundo do mar.
+            Como é lindo o canto de Yemanjá<br></br>Faz até o pescador chorar<br></br>Quem não
+            escuta a mãe d'água cantar<br></br>Vai com ela pro fundo do mar.
           </Typography>
         </div>
         <div className="iemanja-first-picture-wrapper">
