@@ -50,8 +50,8 @@ function Oba({ isDesktop }: ObaProps) {
         <div className="oba-carrousel">
           <Carousel fade controls={isDesktop} interval={5000}>
             {obaPictures.map((picture, key) => (
-              <CarouselItem>
-                <img className="oba-carrousel-img" key={key} src={picture.name} />
+              <CarouselItem key={key}>
+                <img className="oba-carrousel-img" src={picture.name} />
               </CarouselItem>
             ))}
           </Carousel>

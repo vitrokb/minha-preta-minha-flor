@@ -52,8 +52,8 @@ function Yansa({ isDesktop }: YansaProps) {
         <div className="yansa-carrousel">
           <Carousel fade controls={isDesktop} interval={5000}>
             {YansaPictures.map((picture, key) => (
-              <CarouselItem>
-                <img className="yansa-carrousel-img" key={key} src={picture.name} />
+              <CarouselItem key={key}>
+                <img className="yansa-carrousel-img" src={picture.name} />
               </CarouselItem>
             ))}
           </Carousel>

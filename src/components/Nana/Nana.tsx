@@ -51,8 +51,8 @@ function Nana({ isDesktop }: NanaProps) {
         <div className="nana-carrousel">
           <Carousel fade controls={isDesktop} interval={5000}>
             {nanaPictures.map((picture, key) => (
-              <CarouselItem>
-                <img className="nana-carrousel-img" key={key} src={picture.name} />
+              <CarouselItem key={key}>
+                <img className="nana-carrousel-img" src={picture.name} />
               </CarouselItem>
             ))}
           </Carousel>

@@ -45,8 +45,8 @@ function Oxum({ isDesktop }: OxumProps) {
         <div className="oxum-carrousel">
           <Carousel fade controls={isDesktop} interval={5000}>
             {OxumPictures.map((picture, key) => (
-              <CarouselItem>
-                <img className="oxum-carrousel-img" key={key} src={picture.name} />
+              <CarouselItem key={key}>
+                <img className="oxum-carrousel-img" src={picture.name} />
               </CarouselItem>
             ))}
           </Carousel>
