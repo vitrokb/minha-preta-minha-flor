@@ -1,0 +1,7 @@
+.project-wrapper {
+  background-color: #F9F1E4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
