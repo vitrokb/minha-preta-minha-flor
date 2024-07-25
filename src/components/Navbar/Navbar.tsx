@@ -17,19 +17,22 @@ function Navbar() {
 
   return (
     <nav
-      className={`navbar ${isOpen && matchesMediaQuery ? 'changeDirection' : ''} ${
+      className={`navbar ${isOpen ? 'changeDirection opened' : ''} ${
         matchesMediaQuery ? 'responsive' : ''
       }`}
     >
-      <div className={`burger ${!matchesMediaQuery ? 'notShowsBurger' : ''}`} onClick={toggleMenu}>
-        <div className={`line ${isOpen ? 'open' : ''}`}></div>
-        <div className={`line ${isOpen ? 'open' : ''}`}></div>
-        <div className={`line ${isOpen ? 'open' : ''}`}></div>
-      </div>
+      {matchesMediaQuery ? (
+        <button
+          className={isOpen ? 'btn-close button-close' : 'navbar-toggler'}
+          type="button"
+          aria-label="Toggle navigation"
+          onClick={() => toggleMenu()}
+        >
+          {isOpen ? null : <span className="navbar-toggler-icon"></span>}
+        </button>
+      ) : null}
       <ul
-        className={`nav-links ${isOpen && matchesMediaQuery ? 'open' : ''} ${
-          matchesMediaQuery ? '' : 'desktopLinks'
-        }`}
+        className={`nav-links ${isOpen ? 'open' : ''} ${matchesMediaQuery ? '' : 'desktopLinks'}`}
       >
         <li>
           <Link to="/">

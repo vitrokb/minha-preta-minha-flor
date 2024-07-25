@@ -1,51 +1,22 @@
 .navbar {
   background-color: #F9F1E4;
-  padding-right: 1rem;
   position: absolute;
+  padding: 1rem;
   right: 0px;
   top: 0;
   z-index: 10;
 }
 
-.navbar.responsive {
-  padding: 1rem;
+.navbar.responsive.opened {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 5rem 5rem;
 }
 
 .navbar.changeDirection {
   height: 100vh;
   width: 100vw;
-}
-
-.burger {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 2rem;
-  width: 2rem;
-}
-
-.burger.notShowsBurger {
-  display: none;
-}
-
-.line {
-  background-color: #0E0A0A;
-  height: 0.25rem;
-  width: 2rem;
-  transition: all 0.3s ease;
-}
-
-.line.open:nth-child(1) {
-  transform: rotate(50deg) translate(0.5rem, 0.5rem);
-}
-
-.line.open:nth-child(2) {
-  opacity: 0;
-}
-
-.line.open:nth-child(3) {
-  transform: rotate(-50deg) translate(0.48rem, -0.5rem);
 }
 
 .nav-links {
@@ -66,6 +37,13 @@
   align-items: center;
   transition: all 0.3s ease;
   overflow: hidden;
+  padding: 0;
+}
+
+.button-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
 }
 
 li {
