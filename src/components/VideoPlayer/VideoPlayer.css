@@ -1,0 +1,6 @@
+.videoplayer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 2rem;
+}
