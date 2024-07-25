@@ -11,7 +11,7 @@ function Project() {
     textAlign: 'center',
     '@media (min-width: 769px)': {
       margin: '4rem 4rem',
-      width: '80%',
+      width: '50%',
       alignSelf: 'center',
     },
   }));
@@ -24,7 +24,7 @@ function Project() {
       </div>
       <StyledTypography variant="h1">
         O PROJETO MINHA PRETA MINHA FLOR - OLHAR SOB NOSSAS RAINHAS YABÁS, CONSISTE NA PRODUÇÃO E
-        REALIZAÇÃO DE ENSAIOS FOTOGRÁFICOS QUE CULMInaram NA MONTAGEM dessa EXPOSIÇÃO, FÍSICA E
+        REALIZAÇÃO DE ENSAIOS FOTOGRÁFICOS QUE CULMINARAM NA MONTAGEM DESSA EXPOSIÇÃO, FÍSICA E
         VIRTUAL QUE VALORIZE E ENALTEÇA A BELEZA DE MULHERES NEGRAS SOBRE O OLHAR DE EQUIPE FORMADA
         POR MULHERES PRETAS SOB OS CENÁRIOS DA CIDADE DE NITERÓI COM A REFERÊNCIA ARTÍSTICA
         ANCESTRAL E MATRIARCAL DAS YABÁS, RAINHAS E DEUSAS DA MITOLOGIA YORÙBÁ E DE EXALTAÇÃO DAS

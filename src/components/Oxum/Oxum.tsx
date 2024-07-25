@@ -1,16 +1,20 @@
 import { Typography } from '@mui/material';
-import Oxum1 from '../../assets/oxum-pictures/1.png';
-import Oxum2 from '../../assets/oxum-pictures/2.png';
-import Oxum3 from '../../assets/oxum-pictures/3.png';
-import Oxum4 from '../../assets/oxum-pictures/4.png';
-import Oxum5 from '../../assets/oxum-pictures/5.png';
-import Oxum6 from '../../assets/oxum-pictures/6.png';
-import Oxum7 from '../../assets/oxum-pictures/7.png';
-import Oxum8 from '../../assets/oxum-pictures/8.png';
+import { Carousel, CarouselItem } from 'react-bootstrap';
+import Oxum1 from '../../assets/oxum-pictures/1.jpg';
+import Oxum2 from '../../assets/oxum-pictures/2.jpg';
+import Oxum3 from '../../assets/oxum-pictures/3.jpg';
+import Oxum4 from '../../assets/oxum-pictures/4.jpg';
+import Oxum5 from '../../assets/oxum-pictures/5.jpg';
+import Oxum6 from '../../assets/oxum-pictures/6.jpg';
+import Oxum7 from '../../assets/oxum-pictures/7.jpg';
+import Oxum8 from '../../assets/oxum-pictures/8.jpg';
 import './Oxum.css';
-import Carousel from 'react-material-ui-carousel';
 
-function Oxum() {
+interface OxumProps {
+  isDesktop: boolean;
+}
+
+function Oxum({ isDesktop }: OxumProps) {
   const OxumPictures = [
     { name: Oxum2 },
     { name: Oxum3 },
@@ -39,9 +43,11 @@ function Oxum() {
 
       <div className="oxum-carrousel-wrapper">
         <div className="oxum-carrousel">
-          <Carousel duration={1000} interval={7000}>
+          <Carousel fade controls={isDesktop} interval={5000}>
             {OxumPictures.map((picture, key) => (
-              <img className="oxum-carrousel-img" key={key} src={picture.name} />
+              <CarouselItem>
+                <img className="oxum-carrousel-img" key={key} src={picture.name} />
+              </CarouselItem>
             ))}
           </Carousel>
         </div>

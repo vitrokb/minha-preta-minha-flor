@@ -1,18 +1,22 @@
 import { Typography } from '@mui/material';
-import Carousel from 'react-material-ui-carousel';
-import Iemanja1 from '../../assets/iemanja-pictures/1.png';
-import Iemanja2 from '../../assets/iemanja-pictures/2.png';
-import Iemanja4 from '../../assets/iemanja-pictures/4.png';
-import Iemanja5 from '../../assets/iemanja-pictures/5.png';
-import Iemanja6 from '../../assets/iemanja-pictures/6.png';
-import Iemanja7 from '../../assets/iemanja-pictures/7.png';
-import Iemanja8 from '../../assets/iemanja-pictures/8.png';
-import Iemanja9 from '../../assets/iemanja-pictures/9.png';
-import Iemanja11 from '../../assets/iemanja-pictures/11.png';
-import Iemanja12 from '../../assets/iemanja-pictures/12.png';
+import { Carousel, CarouselItem } from 'react-bootstrap';
+import Iemanja1 from '../../assets/iemanja-pictures/1.jpg';
+import Iemanja2 from '../../assets/iemanja-pictures/2.jpg';
+import Iemanja4 from '../../assets/iemanja-pictures/4.jpg';
+import Iemanja5 from '../../assets/iemanja-pictures/5.jpg';
+import Iemanja6 from '../../assets/iemanja-pictures/6.jpg';
+import Iemanja7 from '../../assets/iemanja-pictures/7.jpg';
+import Iemanja8 from '../../assets/iemanja-pictures/8.jpg';
+import Iemanja9 from '../../assets/iemanja-pictures/9.jpg';
+import Iemanja11 from '../../assets/iemanja-pictures/11.jpg';
+import Iemanja12 from '../../assets/iemanja-pictures/12.jpg';
 import './Iemanja.css';
 
-function Iemanja() {
+interface IemanjaProps {
+  isDesktop: boolean;
+}
+
+function Iemanja({ isDesktop }: IemanjaProps) {
   const IemanjaPictures = [
     { name: Iemanja2 },
     { name: Iemanja4 },
@@ -43,9 +47,11 @@ function Iemanja() {
 
       <div className="iemanja-carrousel-wrapper">
         <div className="iemanja-carrousel">
-          <Carousel duration={1000} interval={7000}>
+          <Carousel fade controls={isDesktop} interval={5000}>
             {IemanjaPictures.map((picture, key) => (
-              <img className="iemanja-carrousel-img" key={key} src={picture.name} />
+              <CarouselItem key={key}>
+                <img className="iemanja-carrousel-img" src={picture.name} />
+              </CarouselItem>
             ))}
           </Carousel>
         </div>
