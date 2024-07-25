@@ -7,7 +7,7 @@ import './Navbar.css';
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const matchesMediaQuery = useMediaQuery('(max-width:670px)');
+  const matchesMediaQuery = useMediaQuery('(max-width: 735px)');
 
   const location = useLocation();
 
