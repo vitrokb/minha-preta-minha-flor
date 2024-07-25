@@ -15,6 +15,10 @@ function Navbar() {
     setIsOpen(!isOpen);
   };
 
+  function checkPath(path: string) {
+    return location?.pathname == path ? 'active' : '';
+  }
+
   return (
     <nav
       className={`navbar ${isOpen ? 'changeDirection opened' : ''} ${
@@ -36,30 +40,22 @@ function Navbar() {
       >
         <li>
           <Link to="/">
-            <StyledButton variant="outlined" active={location?.pathname == '/' ? 1 : 0}>
-              INICIO
-            </StyledButton>
+            <StyledButton active={checkPath('/')}>INICIO</StyledButton>
           </Link>
         </li>
         <li>
           <Link to="/exposicao">
-            <StyledButton variant="outlined" active={location?.pathname == '/exposicao' ? 1 : 0}>
-              EXPOSIÇÃO
-            </StyledButton>
+            <StyledButton active={checkPath('/exposicao')}>EXPOSIÇÃO</StyledButton>
           </Link>
         </li>
         <li>
           <Link to="/projeto">
-            <StyledButton variant="outlined" active={location?.pathname == '/projeto' ? 1 : 0}>
-              PROJETO
-            </StyledButton>
+            <StyledButton active={checkPath('/projeto')}>PROJETO</StyledButton>
           </Link>
         </li>
         <li>
           <Link to="/bastidores">
-            <StyledButton variant="outlined" active={location?.pathname == '/bastidores' ? 1 : 0}>
-              BASTIDORES
-            </StyledButton>
+            <StyledButton active={checkPath('/bastidores')}>BASTIDORES</StyledButton>
           </Link>
         </li>
       </ul>

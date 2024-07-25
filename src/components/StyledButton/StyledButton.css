@@ -1,0 +1,29 @@
+.custom-btn {
+  background-color: #F9F1E4;
+  color: #000;
+  border: 2px solid #0E0A0A;
+  border-radius: 0;
+  letter-spacing: 1px;
+  font-size: 0.750rem;
+  font-weight: 700;
+  font-family: 'Open Sauce';
+  padding: 9px 18px;
+}
+
+.custom-btn.active {
+  background-color: #0E0A0A;
+  border: 2px solid #0E0A0A;
+  color: #fff;
+}
+
+.custom-btn:hover {
+  background-color: #0E0A0A;
+  color: #fff;
+}
+
+.custom-btn:focus,
+.custom-btn:active,
+.custom-btn:hover {
+  outline: none;
+  box-shadow: none;
+}
