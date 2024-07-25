@@ -1,16 +1,20 @@
 import { Typography } from '@mui/material';
-import Oba1 from '../../assets/oba-pictures/1.png';
-import Oba2 from '../../assets/oba-pictures/2.png';
-import Oba3 from '../../assets/oba-pictures/3.png';
-import Oba4 from '../../assets/oba-pictures/4.png';
-import Oba5 from '../../assets/oba-pictures/5.png';
-import Oba6 from '../../assets/oba-pictures/6.png';
-import Oba7 from '../../assets/oba-pictures/7.png';
-import Oba8 from '../../assets/oba-pictures/8.png';
-import Carousel from 'react-material-ui-carousel';
+import { Carousel, CarouselItem } from 'react-bootstrap';
+import Oba1 from '../../assets/oba-pictures/1.jpg';
+import Oba2 from '../../assets/oba-pictures/2.jpg';
+import Oba3 from '../../assets/oba-pictures/3.jpg';
+import Oba4 from '../../assets/oba-pictures/4.jpg';
+import Oba5 from '../../assets/oba-pictures/5.jpg';
+import Oba6 from '../../assets/oba-pictures/6.jpg';
+import Oba7 from '../../assets/oba-pictures/7.jpg';
+import Oba8 from '../../assets/oba-pictures/8.jpg';
 import './Oba.css';
 
-function Oba() {
+interface ObaProps {
+  isDesktop: boolean;
+}
+
+function Oba({ isDesktop }: ObaProps) {
   const obaPictures = [
     { name: Oba2 },
     { name: Oba3 },
@@ -44,9 +48,11 @@ function Oba() {
 
       <div className="oba-carrousel-wrapper">
         <div className="oba-carrousel">
-          <Carousel duration={1000} interval={7000}>
+          <Carousel fade controls={isDesktop} interval={5000}>
             {obaPictures.map((picture, key) => (
-              <img className="oba-carrousel-img" key={key} src={picture.name} />
+              <CarouselItem>
+                <img className="oba-carrousel-img" key={key} src={picture.name} />
+              </CarouselItem>
             ))}
           </Carousel>
         </div>

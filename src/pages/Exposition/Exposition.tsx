@@ -6,19 +6,22 @@ import { Yansa } from '../../components/Yansa';
 import { Nana } from '../../components/Nana';
 import { Oba } from '../../components/Oba';
 import { Footer } from '../../components/Footer';
+import { useMediaQuery } from '@mui/material';
 import './Exposition.css';
 
 function Exposition() {
+  const isDesktop = useMediaQuery('(min-width: 1023px)');
+
   return (
     <div className="exposition-content">
       <Logo />
       <Navbar />
 
-      <Iemanja />
-      <Oxum />
-      <Yansa />
-      <Nana />
-      <Oba />
+      <Iemanja isDesktop={isDesktop} />
+      <Oxum isDesktop={isDesktop} />
+      <Yansa isDesktop={isDesktop} />
+      <Nana isDesktop={isDesktop} />
+      <Oba isDesktop={isDesktop} />
 
       <Footer />
     </div>

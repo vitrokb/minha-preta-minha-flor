@@ -1,16 +1,20 @@
 import { Typography } from '@mui/material';
-import Nana1 from '../../assets/nana-pictures/1.png';
-import Nana2 from '../../assets/nana-pictures/2.png';
-import Nana3 from '../../assets/nana-pictures/3.png';
-import Nana4 from '../../assets/nana-pictures/4.png';
-import Nana5 from '../../assets/nana-pictures/5.png';
-import Nana6 from '../../assets/nana-pictures/6.png';
-import Nana7 from '../../assets/nana-pictures/7.png';
-import Nana8 from '../../assets/nana-pictures/8.png';
-import Carousel from 'react-material-ui-carousel';
+import { Carousel, CarouselItem } from 'react-bootstrap';
+import Nana1 from '../../assets/nana-pictures/1.jpg';
+import Nana2 from '../../assets/nana-pictures/2.jpg';
+import Nana3 from '../../assets/nana-pictures/3.jpg';
+import Nana4 from '../../assets/nana-pictures/4.jpg';
+import Nana5 from '../../assets/nana-pictures/5.jpg';
+import Nana6 from '../../assets/nana-pictures/6.jpg';
+import Nana7 from '../../assets/nana-pictures/7.jpg';
+import Nana8 from '../../assets/nana-pictures/8.jpg';
 import './Nana.css';
 
-function Nana() {
+interface NanaProps {
+  isDesktop: boolean;
+}
+
+function Nana({ isDesktop }: NanaProps) {
   const nanaPictures = [
     { name: Nana2 },
     { name: Nana3 },
@@ -45,9 +49,11 @@ function Nana() {
 
       <div className="nana-carrousel-wrapper">
         <div className="nana-carrousel">
-          <Carousel duration={1000} interval={7000}>
+          <Carousel fade controls={isDesktop} interval={5000}>
             {nanaPictures.map((picture, key) => (
-              <img className="nana-carrousel-img" key={key} src={picture.name} />
+              <CarouselItem>
+                <img className="nana-carrousel-img" key={key} src={picture.name} />
+              </CarouselItem>
             ))}
           </Carousel>
         </div>

@@ -1,17 +1,21 @@
 import { Typography } from '@mui/material';
-import Yansa1 from '../../assets/yansa-pictures/1.png';
-import Yansa2 from '../../assets/yansa-pictures/2.png';
-import Yansa3 from '../../assets/yansa-pictures/3.png';
-import Yansa4 from '../../assets/yansa-pictures/4.png';
-import Yansa5 from '../../assets/yansa-pictures/5.png';
-import Yansa6 from '../../assets/yansa-pictures/6.png';
-import Yansa7 from '../../assets/yansa-pictures/7.png';
-import Yansa8 from '../../assets/yansa-pictures/8.png';
-import Yansa9 from '../../assets/yansa-pictures/9.png';
+import { Carousel, CarouselItem } from 'react-bootstrap';
+import Yansa1 from '../../assets/yansa-pictures/1.jpg';
+import Yansa2 from '../../assets/yansa-pictures/2.jpg';
+import Yansa3 from '../../assets/yansa-pictures/3.jpg';
+import Yansa4 from '../../assets/yansa-pictures/4.jpg';
+import Yansa5 from '../../assets/yansa-pictures/5.jpg';
+import Yansa6 from '../../assets/yansa-pictures/6.jpg';
+import Yansa7 from '../../assets/yansa-pictures/7.jpg';
+import Yansa8 from '../../assets/yansa-pictures/8.jpg';
+import Yansa9 from '../../assets/yansa-pictures/9.jpg';
 import './Yansa.css';
-import Carousel from 'react-material-ui-carousel';
 
-function Yansa() {
+interface YansaProps {
+  isDesktop: boolean;
+}
+
+function Yansa({ isDesktop }: YansaProps) {
   const YansaPictures = [
     { name: Yansa2 },
     { name: Yansa3 },
@@ -46,9 +50,11 @@ function Yansa() {
 
       <div className="yansa-carrousel-wrapper">
         <div className="yansa-carrousel">
-          <Carousel duration={1000} interval={7000}>
+          <Carousel fade controls={isDesktop} interval={5000}>
             {YansaPictures.map((picture, key) => (
-              <img className="yansa-carrousel-img" key={key} src={picture.name} />
+              <CarouselItem>
+                <img className="yansa-carrousel-img" key={key} src={picture.name} />
+              </CarouselItem>
             ))}
           </Carousel>
         </div>
