@@ -44,15 +44,15 @@ function Iemanja({ isDesktop }: IemanjaProps) {
       }
       modelStatement='"YEMANJÁ PARA MIM É TUDO. ABAIXO DE DEUS FOI ELA QUEM ME TIROU DA DEPRESSÃO. FOI ELA QUE ME LIVROU DE MUITAS COISAS. DEPOIS DE DESCOBRIR QUE ELA ERA MINHA MÃE. QUANDO DESCOBRI QUE YEMANJÁ ERA MINHA MÃE. FOI A COISA MAIS LINDA DA MINHA VIDA. ELA MUDOU TOTALMENTE A MINHA VIDA.“'
       grid={
-        <div className="grid-wrapper">
-          <div className="grid-item-1">
-            <img className="grid-img" src={Iemanja11} />
+        <div className="iemanja-grid-wrapper">
+          <div className="iemanja-grid-item-1">
+            <img className="iemanja-grid-img" src={Iemanja11} />
           </div>
-          <div className="grid-item-2">
-            <img className="grid-img" src={Iemanja12} />
+          <div className="iemanja-grid-item-2">
+            <img className="iemanja-grid-img" src={Iemanja12} />
           </div>
-          <div className="grid-item-3">
-            <img className="grid-img" src={Iemanja5} />
+          <div className="iemanja-grid-item-3">
+            <img className="iemanja-grid-img" src={Iemanja5} />
           </div>
         </div>
       }
