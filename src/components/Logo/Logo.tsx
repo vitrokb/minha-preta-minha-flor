@@ -6,7 +6,7 @@ function Logo() {
     <img
       className="logo"
       src={LogoImage}
-      alt="Projecto logo with the text 'Minha preta minha flor' and a flower"
+      alt="Project logo with the text 'Minha preta minha flor' and a flower"
     />
   );
 }
