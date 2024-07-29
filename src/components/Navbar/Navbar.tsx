@@ -32,11 +32,11 @@ function Navbar() {
           aria-label="Toggle navigation"
           onClick={() => toggleMenu()}
         >
-          {isOpen ? null : <span className="navbar-toggler-icon"></span>}
+          {!isOpen ? <span className="navbar-toggler-icon"></span> : null}
         </button>
       ) : null}
       <ul
-        className={`nav-links ${isOpen ? 'open' : ''} ${matchesMediaQuery ? '' : 'desktopLinks'}`}
+        className={`nav-links ${isOpen ? 'open' : ''} ${!matchesMediaQuery ? 'desktopLinks' : ''}`}
       >
         <li>
           <Link to="/">

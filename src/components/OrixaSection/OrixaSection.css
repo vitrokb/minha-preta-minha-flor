@@ -1,0 +1,153 @@
+.section-wrapper {
+  margin-bottom: 5rem;
+}
+
+.first-section-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.first-section-wrapper-inverse {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 1rem;
+}
+
+.first-section-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem 0;
+}
+
+.first-picture-flex-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-picture-wrapper {
+  width: 100vw;
+  margin-bottom: 2rem;
+}
+
+.first-picture {
+  width: 90%;
+}
+
+.first-picture-wrapper img {
+  border-radius: 5px;
+  width: -webkit-fill-available;
+}
+
+.carrousel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrousel {
+  width: 90vw;
+  margin: 2rem;
+}
+
+.carrousel-img {
+  border-radius: 5px;
+  width: -webkit-fill-available;
+}
+
+.second-section-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.second-section-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 2rem 0;
+}
+
+@media (min-width: 1023px) {
+  .first-section-wrapper {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .first-section-wrapper-inverse {
+    flex-direction: row-reverse;
+  }
+
+  .first-section-text {
+    align-items: flex-end;
+    margin: 0 1rem 0 4rem;
+  }
+
+  .inverse-text {
+    align-items: flex-start;
+    margin: 0 4rem 0 0;
+  }
+
+  .first-picture-flex-wrapper {
+    justify-content: flex-start;
+  }
+
+  .inverse-flex {
+    justify-content: flex-end;
+  }
+
+  .first-picture-wrapper {
+    width: 70vw;
+  }
+
+  .oba-section {
+    width: 60vw;
+  }
+
+  .first-picture {
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 1279px) {
+  .first-picture-flex-wrapper {
+    justify-content: flex-start;
+  }
+
+  .inverse-flex {
+    justify-content: flex-end;
+  }
+
+  .first-picture-wrapper {
+    width: 80vw;
+  }
+
+  .oba-section {
+    width: 47vw;
+  }
+
+  .second-section-wrapper {
+    flex-direction: row;
+    margin: 0 2rem;
+  }
+
+  .second-section-text {
+    margin: 0 2rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .carrousel-img {
+    width: 100%;
+  }
+
+  .carrousel {
+    width: 70vw;
+  }
+}

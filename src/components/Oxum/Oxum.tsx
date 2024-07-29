@@ -1,5 +1,4 @@
-import { Typography } from '@mui/material';
-import { Carousel, CarouselItem } from 'react-bootstrap';
+import { OrixaSection } from '../OrixaSection';
 import Oxum1 from '../../assets/oxum-pictures/1.jpg';
 import Oxum2 from '../../assets/oxum-pictures/2.jpg';
 import Oxum3 from '../../assets/oxum-pictures/3.jpg';
@@ -24,52 +23,24 @@ function Oxum({ isDesktop }: OxumProps) {
   ];
 
   return (
-    <>
-      <div className="oxum-first-section-wrapper">
-        <div className="oxum-first-picture-wrapper">
-          <div className="oxum-first-picture">
-            <img src={Oxum1} />
-          </div>
-        </div>
-        <div className="oxum-text">
-          <Typography variant="h3">Oxum</Typography>
-          <Typography variant="body2" paragraph sx={{ textAlign: 'left' }}>
-            Eu vi Mamãe Oxum nas cachoeiras <br></br> Sentada na beira do rio <br></br> Colhendo
-            lírios (lírio e) <br></br> Colhendo lírios (lírios a) <br></br> Colhendo lírios pra
-            enfeitar nosso congá
-          </Typography>
-        </div>
-      </div>
-
-      <div className="oxum-carrousel-wrapper">
-        <div className="oxum-carrousel">
-          <Carousel fade controls={isDesktop} interval={5000}>
-            {OxumPictures.map((picture, key) => (
-              <CarouselItem key={key}>
-                <img className="oxum-carrousel-img" src={picture.name} />
-              </CarouselItem>
-            ))}
-          </Carousel>
-        </div>
-      </div>
-
-      <div className="oxum-second-section-wrapper">
-        <div className="oxum-second-section-text">
-          <div className="">
-            <Typography
-              variant="h6"
-              sx={{
-                marginBottom: '1rem',
-                textAlign: 'center',
-                fontWeight: 700,
-                lineHeight: '1.375rem',
-              }}
-            >
-              THAIS PIO <br></br> THAIS
-            </Typography>
-          </div>
-          <Typography variant="body2" paragraph sx={{ textAlign: 'center' }}>
-            “RECENTEMENTE EU PARTICIPEI DE UM PROCESSO DE UM BATIZADO DE COROAÇÃO NO TERREIRO, FOI
+    <OrixaSection
+      isDesktop={isDesktop}
+      firstImage={Oxum1}
+      carrouselImages={OxumPictures}
+      orixaName="Oxum"
+      firstSectionText={
+        <>
+          Eu vi Mamãe Oxum nas cachoeiras <br></br> Sentada na beira do rio <br></br> Colhendo
+          lírios (lírio e) <br></br> Colhendo lírios (lírios a) <br></br> Colhendo lírios pra
+          enfeitar nosso congá
+        </>
+      }
+      modelName={
+        <>
+          THAIS PIO <br></br> THAIS
+        </>
+      }
+      modelStatement="“RECENTEMENTE EU PARTICIPEI DE UM PROCESSO DE UM BATIZADO DE COROAÇÃO NO TERREIRO, FOI
             UM PROCESSO MUITO INTERESSANTE PORQUE NO DIA, FOI COMO SE FOSSE UMA GRANDE FESTA, E
             DEPOIS QUE EU PASSEI POR ESSE PROCESSO, EU SENTI MUITO A FORÇA DE MÃE OXUM, ME
             RELEMBRANDO DA MINHA FORÇA, ME RELEMBRANDO DA BELEZA, ME LEMBRANDO A TER SABERIA. SE
@@ -77,10 +48,9 @@ function Oxum({ isDesktop }: OxumProps) {
             ESTAR EM TRAÇOS FÍSICOS, MAS ME LEMBRANDO QUE A MINHA BELEZA . PODE ESTAR NA FORÇA QUE
             ELA TEM PRA ME DEIXAR MAIS SEGURA, MAIS CONFIANTE E QUE MINHA BELEZA NA IDEIA DE QUE EU
             POSSO CONSEGUIR ALCANÇAR OS MEUS SONHOS QUE EU ACHAVA QUE ERA MAIS IMPOSSÍVEIS. A FORÇA
-            DE OXUM TEM APARECIDO NA MINHA VIDA COMO AXÉ MESMO. COMO FORÇA VITAL.“
-          </Typography>
-        </div>
-
+            DE OXUM TEM APARECIDO NA MINHA VIDA COMO AXÉ MESMO. COMO FORÇA VITAL.“"
+      firstSectionInverse
+      grid={
         <div className="oxum-grid-wrapper">
           <div className="oxum-grid-item-1">
             <img className="oxum-grid-img" src={Oxum7} />
@@ -89,8 +59,8 @@ function Oxum({ isDesktop }: OxumProps) {
             <img className="oxum-grid-img" src={Oxum8} />
           </div>
         </div>
-      </div>
-    </>
+      }
+    />
   );
 }
 
