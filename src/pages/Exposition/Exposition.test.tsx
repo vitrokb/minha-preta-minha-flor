@@ -54,7 +54,7 @@ vi.mock('@mui/material', async () => {
   };
 });
 
-const mockedUseMediaQuery = useMediaQuery as vi.Mock;
+const mockedUseMediaQuery = useMediaQuery as jest.Mock;
 
 describe('Exposition Component', () => {
   it('should render all components correctly in desktop view', () => {

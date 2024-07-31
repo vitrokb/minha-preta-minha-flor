@@ -16,8 +16,8 @@ vi.mock('react-router-dom', async () => {
   };
 });
 
-const mockedUseMediaQuery = useMediaQuery as vi.Mock;
-const mockedUseLocation = useLocation as vi.Mock;
+const mockedUseMediaQuery = useMediaQuery as jest.Mock;
+const mockedUseLocation = useLocation as jest.Mock;
 
 describe('Navbar component', () => {
   it('renders the Navbar component', () => {

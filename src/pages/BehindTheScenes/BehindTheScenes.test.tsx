@@ -10,10 +10,6 @@ vi.mock('../../components/Navbar', () => ({
   Navbar: () => <div data-testid="navbar" />,
 }));
 
-vi.mock('../../components/VideoPlayer', () => ({
-  VideoPlayer: () => <div data-testid="video-player" />,
-}));
-
 describe('BehindTheScenes component', () => {
   it('should render Logo correctly', () => {
     render(<BehindTheScenes />);
