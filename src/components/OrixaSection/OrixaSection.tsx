@@ -5,8 +5,8 @@ import './OrixaSection.css';
 
 interface OrixaSectionProps {
   isDesktop: boolean;
-  firstImage: string;
-  carrouselImages: { name: string }[];
+  firstImage: { name: string; description: string };
+  carrouselImages: { name: string; description: string }[];
   orixaName: string;
   firstSectionText: ReactNode | string;
   modelName: ReactNode | string;
@@ -68,7 +68,7 @@ function OrixaSection({
           className={`${responsiveClasses.firstPictureWrapper} ${responsiveClasses.firstPictureFlexWrapper}`}
         >
           <div className="first-picture">
-            <img src={firstImage} />
+            <img src={firstImage.name} alt={firstImage.description} />
           </div>
         </div>
       </div>
@@ -78,7 +78,7 @@ function OrixaSection({
           <Carousel fade controls={isDesktop} interval={5000}>
             {carrouselImages.map((picture, key) => (
               <CarouselItem key={key}>
-                <img className="carrousel-img" src={picture.name} />
+                <img className="carrousel-img" alt={picture.description} src={picture.name} />
               </CarouselItem>
             ))}
           </Carousel>

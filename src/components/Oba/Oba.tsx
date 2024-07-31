@@ -15,20 +15,20 @@ interface ObaProps {
 
 function Oba({ isDesktop }: ObaProps) {
   const obaPictures = [
-    { name: Oba2 },
-    { name: Oba3 },
-    { name: Oba4 },
-    { name: Oba5 },
-    { name: Oba6 },
+    { name: Oba2, description: 'Obá first carrousel image' },
+    { name: Oba3, description: 'Obá second carrousel image' },
+    { name: Oba4, description: 'Obá third carrousel image' },
+    { name: Oba5, description: 'Obá fourth carrousel image' },
+    { name: Oba6, description: 'Obá fifth carrousel image' },
   ];
 
   return (
     <OrixaSection
       obaSection
       isDesktop={isDesktop}
-      firstImage={Oba1}
+      firstImage={{ name: Oba1, description: 'Obá first image' }}
       carrouselImages={obaPictures}
-      orixaName="Oba"
+      orixaName="Obá"
       firstSectionText={
         <>
           É mãe Obá vibrando sua espada<br></br>Semeando forças, fecundando a Terra<br></br>É mãe
@@ -50,10 +50,10 @@ function Oba({ isDesktop }: ObaProps) {
         <>
           <div className="oba-grid-wrapper">
             <div className="oba-grid-item-1">
-              <img className="oba-grid-img" src={Oba7} />
+              <img className="oba-grid-img" alt="Obá first grid image" src={Oba7} />
             </div>
             <div className="oba-grid-item-2">
-              <img className="oba-grid-img" src={Oba8} />
+              <img className="oba-grid-img" alt="Obá second grid image" src={Oba8} />
             </div>
           </div>
         </>

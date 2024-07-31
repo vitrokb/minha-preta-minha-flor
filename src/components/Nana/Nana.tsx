@@ -15,17 +15,17 @@ interface NanaProps {
 
 function Nana({ isDesktop }: NanaProps) {
   const nanaPictures = [
-    { name: Nana2 },
-    { name: Nana3 },
-    { name: Nana4 },
-    { name: Nana5 },
-    { name: Nana6 },
+    { name: Nana2, description: 'Nana first carrousel image' },
+    { name: Nana3, description: 'Nana second carrousel image' },
+    { name: Nana4, description: 'Nana third carrousel image' },
+    { name: Nana5, description: 'Nana fourth carrousel image' },
+    { name: Nana6, description: 'Nana fifth carrousel image' },
   ];
 
   return (
     <OrixaSection
       isDesktop={isDesktop}
-      firstImage={Nana1}
+      firstImage={{ name: Nana1, description: 'Nana first image' }}
       carrouselImages={nanaPictures}
       orixaName="Nanã"
       firstSectionText={
@@ -50,10 +50,10 @@ function Nana({ isDesktop }: NanaProps) {
         <>
           <div className="nana-grid-wrapper">
             <div className="nana-grid-item-1">
-              <img className="nana-grid-img" src={Nana7} />
+              <img className="nana-grid-img" alt="Nana first grid image" src={Nana7} />
             </div>
             <div className="nana-grid-item-2">
-              <img className="nana-grid-img" src={Nana8} />
+              <img className="nana-grid-img" alt="Nana second grid image" src={Nana8} />
             </div>
           </div>
         </>
