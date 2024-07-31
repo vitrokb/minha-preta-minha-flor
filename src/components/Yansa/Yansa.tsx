@@ -16,19 +16,19 @@ interface YansaProps {
 
 function Yansa({ isDesktop }: YansaProps) {
   const YansaPictures = [
-    { name: Yansa2 },
-    { name: Yansa3 },
-    { name: Yansa4 },
-    { name: Yansa5 },
-    { name: Yansa6 },
-    { name: Yansa7 },
-    { name: Yansa8 },
+    { name: Yansa2, description: 'Yansa first carrousel image' },
+    { name: Yansa3, description: 'Yansa second carrousel image' },
+    { name: Yansa4, description: 'Yansa third carrousel image' },
+    { name: Yansa5, description: 'Yansa fourth carrousel image' },
+    { name: Yansa6, description: 'Yansa fifth carrousel image' },
+    { name: Yansa7, description: 'Yansa sixth carrousel image' },
+    { name: Yansa8, description: 'Yansa seventh carrousel image' },
   ];
 
   return (
     <OrixaSection
       isDesktop={isDesktop}
-      firstImage={Yansa1}
+      firstImage={{ name: Yansa1, description: 'Yansa first image' }}
       carrouselImages={YansaPictures}
       orixaName="Yansã"
       firstSectionText={
@@ -55,13 +55,13 @@ function Yansa({ isDesktop }: YansaProps) {
         <>
           <div className="yansa-grid-wrapper">
             <div className="yansa-grid-item-1">
-              <img className="yansa-grid-img" src={Yansa8} />
+              <img className="yansa-grid-img" alt="Yansa first grid image" src={Yansa8} />
             </div>
             <div className="yansa-grid-item-2">
-              <img className="yansa-grid-img" src={Yansa5} />
+              <img className="yansa-grid-img" alt="Yansa second grid image" src={Yansa5} />
             </div>
             <div className="yansa-grid-item-3">
-              <img className="yansa-grid-img" src={Yansa9} />
+              <img className="yansa-grid-img" alt="Yansa third grid image" src={Yansa9} />
             </div>
           </div>
         </>
